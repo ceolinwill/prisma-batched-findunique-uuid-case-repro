@@ -1,0 +1,21 @@
+generator client {
+  provider            = "prisma-client"
+  output              = "../generated"
+  importFileExtension = "ts"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Item {
+  id String @id @db.Uuid
+}
+
+model Membership {
+  id      Int    @id @default(autoincrement())
+  userId  String @db.Uuid
+  groupId String @db.Uuid
+
+  @@unique([userId, groupId])
+}

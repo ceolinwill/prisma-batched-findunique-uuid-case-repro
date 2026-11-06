@@ -1,0 +1,17 @@
+{
+  "name": "prisma-batched-findunique-uuid-case-repro",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "repro": "prisma db push && prisma generate && node repro.ts"
+  },
+  "dependencies": {
+    "@prisma/adapter-pg": "7.10.1",
+    "@prisma/client": "7.10.1",
+    "pg": "8.23.1",
+    "prisma": "7.10.1"
+  },
+  "engines": {
+    "node": ">=22.18"
+  }
+}
