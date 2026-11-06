@@ -80,5 +80,5 @@ The same mismatch should follow from any value the database matches more loosely
 ## Environment
 
 - `prisma`, `@prisma/client`, `@prisma/adapter-pg` 7.10.1 (the latest `@prisma/client` release), `prisma-client` generator, `pg` 8.23.1
-- PostgreSQL 18
+- PostgreSQL 18.3
 - Node.js 24.22.0, npm 11.19.1, macOS 27.2
