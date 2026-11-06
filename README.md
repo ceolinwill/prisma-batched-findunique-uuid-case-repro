@@ -2,7 +2,7 @@
 
 Prisma Client batches `findUnique` calls made in the same tick into one `WHERE id IN (...)` query, then hands each call its row by comparing the call's arguments to the returned row in JavaScript with `===`. PostgreSQL's `uuid` type accepts any letter case and returns lowercase, so a call whose id is uppercase never matches the row the database returned: it resolves to `null` (`findUniqueOrThrow` throws P2025). The same call on its own finds the row, so the result depends on whether another lookup happened to run at the same moment.
 
-Reported in [prisma/orm#25484](https://github.com/prisma/orm/issues/25484).
+Reported in [prisma/orm#25484](https://github.com/prisma/orm/issues/25484) ([our evidence](https://github.com/prisma/orm/issues/25484#issuecomment-6696071438)).
 
 ## Reproduction
 
